@@ -1,0 +1,93 @@
+.text__title--1 {
+    padding-top: 10rem;
+    font-size: 5.8rem;
+    color: #f9a916;
+    font-family: 'Cooper Black';
+}
+
+.text__title--2 {
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+}
+
+
+.text__title--1 span {
+    color: #000;
+}
+
+.text__title--3 {
+    font-size: 4.5rem;
+    color: #fff;
+    font-family: 'Cooper Black';
+}
+
+.text__title--4 {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.text__title--5 {
+    font-size: 2.8rem;
+    color: rgb(172, 171, 171);
+}
+
+.text__title--6 {
+    font-size: 2.8rem;
+    width: 50rem;
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width: 960px) {
+    .text__title--1 {
+        padding-top: 2rem;
+        font-size: 2.8rem;
+        text-align: center;
+    }
+
+    .text__title--2 {
+        margin-top: 1.5rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .text__title--3 {
+        font-size: 2.5rem;
+        color: #fff;
+        font-family: 'Cooper Black';
+    }
+    
+    .text__title--4 {
+        margin-top: 1rem;
+        font-size: 1rem;
+        color: #fff;
+    }
+    
+    .text__title--5 {
+        font-size: 1.8rem;
+        color: rgb(172, 171, 171);
+    }
+
+    .text__title--6 {
+        font-size: 1.4rem;
+        width: auto;
+        margin: 0 auto;
+    }
+    
+}
+
+
+@media screen and (max-width: 350px) {
+    .text__title--3 {
+        font-size: 2rem;
+        color: #fff;
+        font-family: 'Cooper Black';
+    }
+    
+    .text__title--4 {
+        margin-top: 1rem;
+        font-size: 1rem;
+        color: #fff;
+    }
+}
