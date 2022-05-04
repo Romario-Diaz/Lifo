@@ -58,6 +58,11 @@
     display: none;
 }
 
+.activate {
+    left: -100%;
+   
+}
+
 @media screen and (max-width: 560px) {
     .menu {
         height: 5rem;
@@ -76,14 +81,14 @@
 
     .menu__nav {
         position: fixed;
-        background-color: #fff;
         width: 100%;
         z-index: 100;
         padding: 0;
         margin-bottom: 0;
         top: 5rem;
-        height: 100vh;
-        left: -100%;
+        height: auto;
+        background-color: #1A2541;
+        /* left: -100%; */
     }
 
     .menu__list {
@@ -91,16 +96,18 @@
         height: 100%;
         justify-content: flex-start;
         align-items: center;
+        
     }
 
 
     .menu__link {
         font-size: 1.8rem;
-        color: #1A2541;
+        color: white;
         display: inline-block;
         padding: 1rem 0;
         font-size: 1.4rem;
-       
+        width: 100%;
+        text-align: center;
     }
 
     .menu__logo-image {

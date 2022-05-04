@@ -1,0 +1,528 @@
+.banner {
+    height: 76.8rem;
+    width: 100%;
+    background: url('/images/landing/banner.jpg');
+    background-size: cover;
+
+    @include respond(phone) {
+        height: 40.8rem;
+        background-position: center;
+    }
+
+    &__background {
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: .5);
+    }
+
+    &__header {
+        height: 9.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 2rem;
+    }
+
+    &__menu {
+        padding-right: 8rem;
+        padding-top: 1rem;
+
+        @include respond(tab-port) {
+            position: fixed;
+            background-color: rgba($color: #000000, $alpha: .5);
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: -100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-right: 0rem;
+            transition: all .3s;
+        }
+
+
+
+    }
+
+    &__menu.active {
+        left: 0;
+    }
+
+    &__bars {
+        display: none;
+        position: fixed;
+        width: 4rem;
+        height: 4rem;
+        justify-content: center;
+        align-items: center;
+        right: 1rem;
+        top: 2.5rem;
+        cursor: pointer;
+
+        
+        @include respond(tab-port) {
+            display: flex;
+        }
+
+        i {
+            color: #fff;
+            font-size: 1.8rem;
+        }
+    }
+
+    &__link {
+        font-size: 1.5rem;
+        color: #fff;
+        margin: 0 1.5rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        transition: all .3s ease;
+
+        @include respond(tab-port) {
+            margin-bottom: 2rem;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &__link:hover {
+        color: #F9A815;
+    }
+
+    &__info {
+        padding-top: 15rem;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-family: 'Dancing Script', cursive;
+
+        @include respond(tab-port) {
+            padding-top: 2rem;
+        }
+
+        h1 {
+            font-size: 14rem;
+
+            @include respond(phone) {
+                font-size: 6rem;
+            }
+        }
+
+        p {
+            
+            font-size: 3.2rem;
+            font-weight: 500;
+
+            @include respond(phone) {
+                font-size: 2.5rem;
+            }
+            
+        }
+    }
+
+    &__button {
+        background-color: #F9A815;
+        padding: 1.2rem 2.3rem;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1.6rem;
+        margin-top: 4rem;
+        color: #fff;
+        transition: all .3s;
+        text-transform: uppercase;
+
+        @include respond(phone) {
+            padding: 0.5rem 1.3rem;
+            font-size: 1.3rem;
+        }
+    }
+
+    &__button:hover {
+        background-color: #da9516;
+    }
+}
+
+.about {
+    padding: 12rem 10.4rem;
+    background: url('/images/landing/background.png');
+    background-size: cover;
+    background-position:  right;
+
+    display: flex;
+
+    // padding: 6rem 2.3rem;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+        padding: 3rem 2.3rem;
+    }
+
+    &__container-img {
+        flex: 1;
+        padding: 0 1.5rem;
+
+        img {
+            width: 50rem;
+            height: 33.4rem;
+            border-radius: 1rem;
+
+            @include respond(tab-port) {
+                width: 100%;
+                margin-bottom: 1.5rem;
+                height: 33.4rem;
+            }
+        }
+    }
+
+    &__container-info {
+        flex: 1;
+        padding: 0 1.5rem;
+
+        h2 {
+            font-size: 3.4rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: #333;
+            text-align: center;
+
+            @include respond(tab-port) {
+                font-size: 2.4rem;
+            }
+        }
+
+        hr {
+            height: .2rem;
+            width: 5rem;
+            text-align: center;
+            position: relative;
+            background: #F9A815;
+            margin: 0 auto;
+            margin-bottom: 4rem;
+            border: 0;
+
+            @include respond(tab-port) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: #777;
+            margin-top: 1.5rem;
+            text-align: justify;
+        }
+    }
+}
+
+.overlay {
+    background: #444 url('/images/landing/minibanner.jpg') center center no-repeat fixed;
+    background-size: cover;
+    margin-bottom: 7rem;
+
+
+
+    @include respond(tab-port) {
+        margin-bottom: 3rem;
+        background-position: center;
+    }
+
+    &__background {
+        padding: 8rem 0;
+        background-color: rgba($color: #000000, $alpha: .5);
+
+        @include respond(tab-port) {
+            padding: 6rem 0;
+        }
+    }
+
+    h2 {
+        font-size: 3.4rem;
+        margin-bottom: 2rem;
+        color: #FFF;
+        text-align: center;
+        font-weight: 500;
+
+        @include respond(tab-port) {
+            font-size: 2.4rem;
+            margin-bottom: .5rem;
+        }
+    }
+
+    hr {
+        height: .2rem;
+        width: 5rem;
+        text-align: center;
+        position: relative;
+        background: #F9A815;
+        margin: 0 auto;
+        margin-bottom: 4rem;
+        border: 0;
+
+        @include respond(tab-port) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    p {
+        text-align: center;
+        color: #fff;
+        font-size: 2.2rem;
+        font-weight: 300;
+
+        @include respond(tab-port) {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.menus {
+    padding: 0rem 10.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    background: url('/images/landing/background.png');
+    background-size: cover;
+
+    @include respond(tab-port) {
+        padding: 0 3rem;
+    }
+
+    &__list {
+        width: 50%;
+        padding: 0 2.5rem;
+        margin-bottom: 5rem;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 2.6rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            text-align: center;
+            color: #333;
+
+            @include respond(tab-port) {
+                font-size: 2rem;
+            }
+        }
+
+        hr {
+            height: .2rem;
+            width: 10rem;
+            text-align: center;
+            position: relative;
+            background: #F9A815;
+            margin: 0 auto;
+            margin-bottom: 4rem;
+            border: 0;
+
+            @include respond(tab-port) {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    &__item {
+        margin: 3.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: .2rem dotted rgb(213, 213, 213);
+
+        @include respond(tab-port) {
+            margin: 1.5rem 0;
+        }
+
+        span {
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: #555;
+            text-transform: uppercase;
+            font-weight: 500;
+
+            @include respond(tab-port) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+.gallery {
+    padding: 0 10.4rem;
+    margin-bottom: 5rem;
+
+    @include respond(tab-port) {
+        padding: 0 3rem;
+        margin-bottom: 3rem;
+    }
+
+    &__filter {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 3rem;
+        flex-wrap: wrap;
+
+        @include respond(tab-port) {
+            padding-bottom: .5rem;
+        }
+    }
+
+    &__item {
+        background-color: #eee;
+        padding: 1.2rem 2.4rem;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: #999;
+        border-right: .2rem solid #fff;
+        transition: all .3s ease;
+        margin-bottom: 2rem;
+
+        @include respond(tab-port) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__item:hover {
+        background-color: #F9A815;
+        color: #fff;
+    }
+
+    &__item:nth-child(1) {
+        border-bottom-left-radius: 2rem;
+        border-top-left-radius: 2rem;
+        background-color: #F9A815;
+        color: #Fff;
+
+        @include respond(tab-port) {
+            border-radius: 0;
+        }
+    }
+
+    &__item:last-child {
+        border-bottom-right-radius: 2rem;
+        border-top-right-radius: 2rem;
+
+        @include respond(tab-port) {
+            border-radius: 0;
+        }
+    }
+
+
+    &__images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include respond(tab-port) {
+            justify-content: center;
+        }
+    }
+
+    &__image-item {
+        width: 36rem;
+        height: 24rem;
+        margin: 1.5rem 0;
+        border-radius: 2rem;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+
+        @include respond(tab-port) {
+            height: 28rem;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__image-item:hover &__image-back {
+        left: 0;
+    }
+
+    &__image-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: .5);
+        top: 0;
+        left: -100%;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2rem;
+        transition: all .7s ease;
+
+        span {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 1.7rem;
+
+            @include respond(tab-port) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+}
+
+
+.footers {
+    background-color: #262626;
+
+    &__top {
+        padding: 5rem 10.4rem;
+        display: flex;
+        justify-content: space-around;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            padding: 2rem 5rem ;
+        }
+
+        h3 {
+            color: #F9A815;
+            font-weight: 300;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+
+            @include respond(tab-port) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__col {
+        text-align: center;
+
+        @include respond(tab-port) {
+            margin-bottom: 2rem;
+        }
+        
+    }
+
+    &__bottom {
+        padding: 3rem 0;
+        background-color: #F9A815;
+
+
+        
+        p {
+            color: #fff;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+
+.land_nav {
+    background-color: black;
+    color: #ffffff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    position: fixed;
+}
+
+.land_nav_list {
+    border: 1px solid red;
+    margin: 0px 15px ;
+}
+
+.land_nav_item {
+    cursor: pointer;
+}
+
+.land_section {
+    height: 500px;
+    background-color: blueviolet;
+    border: 1px solid red;
+}
+
+.fixe {
+    position: fixed;
+    background-color: rgba(0, 0, 0, .4);
+    width: 100%;
+    z-index: 1;
+}

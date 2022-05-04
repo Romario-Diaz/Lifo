@@ -3,9 +3,11 @@ import Navigation from '../../components/globals/navigation'
 
 import Footer from '../../components/globals/footer'
 
+import Metadata from '../../components/globals/metadata'
 const Join = () => {
     return (
         <>
+          <Metadata />
             <Navigation />
             <main className="pt-md">
                 <div className="row px-md service">
