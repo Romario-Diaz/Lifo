@@ -1,14 +1,21 @@
 
-const FooterLands = () => {
+const FooterLands = ({ all_cellphones, all_telephones, all_address }) => {
     return (
         <>
             <footer className="footers">
                 <div className="footers__top">
                     <div className="footers__col">
-                        <h3>DIRECCIONES</h3>
-                        <p>Av. Completar la información</p>
-                        <p>Av. Completar la información</p>
-                        <p>Av. Completar la información</p>
+                        <h3>Contacto</h3>
+                        {all_cellphones.map((cell) => {
+                            return (
+                                <p>Celular: {cell.country_code} {cell.cell_number}</p>
+                            )
+                        })}
+                        {all_telephones.map((tell) => {
+                            return (
+                                <p>Telefono: {tell.city_code} {tell.tel_number}</p>
+                            )
+                        })}
                     </div>
                     <div className="footers__col">
                         <h3>HORARIO DE ATENCIÓN</h3>
@@ -17,9 +24,13 @@ const FooterLands = () => {
                     </div>
                     <div className="footers__col">
                         <h3>DIRECCIONES</h3>
-                        <p>Celular: +51 942 612 124</p>
-                        <p>ACelular: +51 918 826 321</p>
-                        <p>Email: reservaciones@burgosrestaurant.com</p>
+                        {all_address.map((add) => {
+                            return (
+                                <p>{add.district} - {add.location}</p>
+                            )
+                        })}
+                       
+                        {/* <p>Email: reservaciones@burgosrestaurant.com</p> */}
                     </div>
                 </div>
                 <div className="footers__bottom">

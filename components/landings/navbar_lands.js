@@ -1,8 +1,10 @@
 import {useState} from 'react' 
 import Link from "next/link"
 
+const NavbarLands = ({basic_landing_information}) => {
 
-const NavbarLands = () => {
+    console.log("los datos en el menu : ", basic_landing_information)
+
     const [showMenu, setShowMenu] = useState(false)
     return (
         <>
@@ -16,25 +18,24 @@ const NavbarLands = () => {
                             <div className="banner__bars" onClick={() => setShowMenu(!showMenu)}>
                                 <i className="fa-solid fa-bars" />
                             </div>
-                            <a className="banner__link" href="#">Nosotros</a>
-                            <a className="banner__link" href="#">Menu</a>
-                            <a className="banner__link" href="#">Galeria</a>
-                            <a className="banner__link" href="#">Contacto</a>
+                            <a className="banner__link" href="#SectionAbout">Nosotros</a>
+                            <a className="banner__link" href="#SectionMenu">Menu</a>
+                            <a className="banner__link" href="#SectionGallery">Galeria</a>
+                            <a className="banner__link" href="#SectionContact">Ubicación </a>
                         </nav>
                     </header>
 
                     <div className="banner__info">
-                        <h1>El Horcon</h1>
+                        <h1>{basic_landing_information.name}</h1>
                         
-                        <p>Pizería y Karaoke</p>
+                        <p>{basic_landing_information.short_description}</p>
                         
-                        <a className="banner__button" href="#">
+                        <a className="banner__button" href="#SectionAbout">
                             Conoce la historia
                         </a>
                     </div>
                 </div>
             </div>
-            
         </>
     )
 }
