@@ -35,3 +35,10 @@
     width: 80%;
     margin: auto;
 }
+
+.react-tabs__tab-panel {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+}

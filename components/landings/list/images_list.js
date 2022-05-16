@@ -8,16 +8,16 @@ const ImagesList = ({ products_cat }) => {
                     console.log(products)
 
                     return (
-                        <div className="gallery">
-                            <div className="gallery__images">
+                        // <div className="gallery">
+                            // <div className="gallery__images">
                                 <div className="gallery__image-item">
                                     <img src={products.url_image} alt="food" />
                                     <div className="gallery__image-back">
                                         <span>{products.name}</span>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            // </div>
+                        // </div>
                     )
                 })
             }

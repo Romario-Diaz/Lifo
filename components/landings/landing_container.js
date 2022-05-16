@@ -32,13 +32,22 @@ const LandingContainer = (props) => {
         let ordered = []
         let cat_name = {}
 
+        let aux = 0
+
         filteredCat: for (var i = 0; i < all_categories.length; i++) {
             cat = []
             cat_name = {}
+            aux = 0;
             filteredProd: for (var j = 0; j < all_products.length; j++) {
                 if (all_categories[i].id == all_products[j].category_id) {
-                    console.log("all good");
                     cat.push(all_products[j])
+                    aux = aux + 1
+
+                    if (aux >= 5 ) {
+                        
+                        break filteredProd;
+                        
+                    }
                 }
             }
             cat_name = all_categories[i].name
