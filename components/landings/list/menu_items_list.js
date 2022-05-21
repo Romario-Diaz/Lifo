@@ -15,19 +15,6 @@ const MenuItemsList = ({ products }) => {
                     )
                 })
             }
-
-            {/* <div className="menus__item">
-                <span>Berenjena a la americana</span>
-                <span>S/. 19.00</span>
-            </div>
-            <div className="menus__item">
-                <span>Salteado de verduras</span>
-                <span>S/. 22.00</span>
-            </div>
-            <div className="menus__item">
-                <span>Tallarines saltados</span>
-                <span>S/. 22.00</span>
-            </div> */}
         </>
 
     )

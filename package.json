@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "next",
-    "build": "next",
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build",
     "start:prod": "set NODE_ENV=production & next start"
   },
   "keywords": [],

@@ -6,6 +6,8 @@ import Metadata from '../../components/globals/metadata'
 
 import LandingContainer from "../../components/landings/landing_container";
 
+import Loading from "../loading";
+
 const Landings = () => {
 
     const [basicLandingInformation, setBasicLandingInformation] = useState([])
@@ -18,9 +20,12 @@ const Landings = () => {
     const [allAddress, setAllAddress] = useState([])
 
     const [pageExists, setPageExists] = useState(false)
+    const [loading, setLoading] = useState(false)
     const router = useRouter()
 
     useEffect(() => {
+        setLoading(true)
+        setPageExists(false)
         fetch(`https://lifo-beta.herokuapp.com/business/landing/${router.query.landings}`, {
             method: 'GET'
         })
@@ -35,10 +40,11 @@ const Landings = () => {
                     setAllCellphones(data.data[4])
                     setAllTelephones(data.data[5])
                     setAllAddress(data.data[6])
-
+                    setLoading(false)
                     setPageExists(true)
 
                 } else {
+                    setLoading(false)
                     setPageExists(false)
                 }
             })
@@ -46,26 +52,36 @@ const Landings = () => {
 
     return (
         <>
-            <Metadata />
-            {pageExists ?
+            {loading ?
                 <>
-                    {
-                        basicLandingInformation && businessImages && allProducts?
-                            <LandingContainer
-                                basic_landing_information={basicLandingInformation}
-                                business_images={businessImages}
-                                all_products={allProducts}
-                                all_categories={allCategories} 
-                                all_cellphones={allCellphones}
-                                all_telephones={allTelephones}
-                                all_address={allAddress}
-                            />
-                            :
-                            <>Cargando</>
-                    }
+                    <Loading />
                 </>
                 :
-                <PageNotFound />
+                <>
+                    <Metadata />
+                    {pageExists ?
+                        <>
+                            {
+                                basicLandingInformation && businessImages && allProducts ?
+                                    <LandingContainer
+                                        basic_landing_information={basicLandingInformation}
+                                        business_images={businessImages}
+                                        all_products={allProducts}
+                                        all_categories={allCategories}
+                                        all_cellphones={allCellphones}
+                                        all_telephones={allTelephones}
+                                        all_address={allAddress}
+                                    />
+                                    :
+                                    <>Cargando</>
+                                    // <PageNotFound />
+                            }
+                        </>
+                        :
+                        <PageNotFound />
+                        
+                    }
+                </>
             }
         </>
     )

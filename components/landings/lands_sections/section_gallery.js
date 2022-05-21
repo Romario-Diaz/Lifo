@@ -1,9 +1,22 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import { useState,useEffect } from 'react';
 
 import ImagesList from '../list/images_list';
 
 const SectionGallery = ({ all_products_sorted }) => {
+
+    const [catName, setCatName] = useState("")
+
+    useEffect(() => {
+        setCatName(all_products_sorted[0].cat_name)
+    }, [all_products_sorted])
+
+    const changeColor = (id) => {
+        console.log("id:", id.cat_name)
+        setCatName(id.cat_name)
+    }
+
     return (
         <>
 
@@ -18,7 +31,11 @@ const SectionGallery = ({ all_products_sorted }) => {
                                 return (
                                     <>
                                         {products.cat.length != 0 ?
-                                            <Tab key={i} className="gallery__item">{products.cat_name}</Tab>
+                                            <Tab key={i} 
+                                            className={catName == products.cat_name ? 'gallery__active' : 'gallery__item'}
+                                            // className="gallery__item"
+                                            onClick={() => {changeColor(products)}}>{products.cat_name}
+                                            </Tab>
                                             :
                                             <></>
                                         }

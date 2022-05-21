@@ -32,7 +32,7 @@
 }
 
 .map_custom {
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 
@@ -41,4 +41,31 @@
     flex-wrap: wrap !important;
     justify-content: space-between !important;
     width: 100% !important;
+    list-style: none !important;
+}
+
+.gallery__item {
+    list-style: none !important;
+}
+
+.gallery__filter {
+    list-style: none !important;
+}
+
+.gallery__active {
+    background-color: #F9A815 !important;
+    /* color: #ffffff !important; */
+
+    /* background-color: #eee; */
+    padding: 1.2rem 2.4rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #999;
+    border-right: .2rem solid #fff;
+    transition: all .3s ease;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    border-radius: 50px !important;
+    /* margin-bottom: 1rem; */
+
 }

@@ -380,6 +380,7 @@
         border-right: .2rem solid #fff;
         transition: all .3s ease;
         margin-bottom: 2rem;
+        cursor: pointer;
 
         @include respond(tab-port) {
             margin-bottom: 1rem;
@@ -394,7 +395,7 @@
     &__item:nth-child(1) {
         border-bottom-left-radius: 2rem;
         border-top-left-radius: 2rem;
-        background-color: #F9A815;
+        // background-color: #F9A815;
         color: #Fff;
 
         @include respond(tab-port) {

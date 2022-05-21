@@ -5,7 +5,7 @@ const ImagesList = ({ products_cat }) => {
         <>
             {
                 products_cat.map((products, i) => {
-                    console.log(products)
+                    // console.log(products)
 
                     return (
                         // <div className="gallery">

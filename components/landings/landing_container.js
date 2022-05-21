@@ -26,7 +26,7 @@ const LandingContainer = (props) => {
 
 
     useEffect(() => {
-        console.log("masp", basic_landing_information[0].name)
+        // console.log("masp", basic_landing_information[0].name)
 
         let cat = []
         let ordered = []
@@ -116,7 +116,7 @@ const LandingContainer = (props) => {
                     <div className="map_custom">
                         <SectionMap
                             googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyA8I_MCpLUl0X16Lz7V2vrqVE1xCDkq2NQ`}
-                            containerElement={<div style={{ height: '550px' }} />}
+                            containerElement={<div style={{ height: '100vh' }} />}
                             mapElement={<div style={{ height: '100%' }} />}
                             loadingElement={<p>Cargando</p>}
 
