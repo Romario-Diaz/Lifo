@@ -126,7 +126,7 @@ const Home = () => {
                     {associate.map((item) =>
                         <div key={item.logo} className="home__business-content">
                             <div className="home__business-logo">
-                                <Link href={`http://localhost:3000/${item.url_landing}`}>
+                                <Link href={`https://lifo-romario-diaz.vercel.app/${item.url_landing}`}>
                                     <a>
                                         <img src={`${item.logo}`} alt="Negocio" />
                                     </a>
