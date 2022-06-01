@@ -7,105 +7,133 @@ import Metadata from '../../components/globals/metadata'
 const Join = () => {
     return (
         <>
-          <Metadata />
-            <Navigation />
-            <main className="pt-md">
-                <div className="row px-md service">
-                    <div className="text-center w-100 content-text">
-                        <h5 className="text__title--1 pt-0"><span>LlEVA TU NEGOCIO AL</span></h5>
-                        <h5 className="text__title--1 pt-0">SIGUIENTE NIVEL</h5>
-                    </div>
+            <Metadata />
+            <Navigation
+                img_url="images/b2.png"
+            />
+
+            <main>
+                <div className="home__play-container">
+                    <img
+                        src="https://lh3.googleusercontent.com/1hJj6Aw2k6cEyFu10xdj5riLo0wBGFKE5XnbGaymhgo1z8Tsr8EpfJr2jbQFRxDONvwk6lak-62F2Fx7-_jp-ykJKA=w1000-e365"
+                        alt="Play store"
+                    />
                 </div>
-                <div className="row px-md service">
-                    <div className="service__content">
-                        <div className="service__content-title"><span>1</span> <h6>Crea tu menu digital perzonalizado</h6></div>
-                        <p>
-                            Obten un total control sobre las categorias, tamaños, variantes, entre otros detalles
-                        </p>
+
+                <div className="home__title-container">
+                    <h2>LLEVA TU NEGOCIO AL <br /> SIGUIENTE NIVEL</h2>
+                </div>
+
+                <div className="home__funcionality-container">
+                    <div className="home__funcionality-item">
+                        <div className="home__funcionality-content">
+                            <h3>1</h3>
+                            <h4>Crea tu menú digital <br />personalizado</h4>
+                            <p>
+                                Obten un total sobre las categorias, <br />
+                                los tamaños, las variantes, entre otros detalles.
+                            </p>
+                        </div>
+                        <div className="home__funcionality-img">
+                            <img
+                                src="/images/f5.png"
+                                alt="restaurant"
+                            />
+                        </div>
                     </div>
-                    <div className="service__image">
-                        <div className="service__container-image">
+
+                    <div className="home__funcionality-item">
+                        <div className="home__funcionality-img">
+                            <img
+                                src="/images/f4.png"
+                                alt="restaurant"
+                            />
+                        </div>
+                        <div className="home__funcionality-content">
+                            <h3>2</h3>
+                            <h4>Ofrece a tus comensales<br />un experiencia de usuario de calidad</h4>
+                            <p>
+                                Por medio del aplicativo móvil permite que puedan ver la carta y realizar pedidos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="home__funcionality-item">
+                        <div className="home__funcionality-content">
+                            <h3>3</h3>
+                            <h4>Gestiona tus pedidos<br /> de una manera rápida, fácil <br /> y detallada </h4>
+                            <p>
+                                Recibe los pedido organizados por mesa y por orden de llegada.
+                            </p>
+                        </div>
+                        <div className="home__funcionality-img">
+                            <img
+                                src="/images/f7.png"
+                                alt="restaurant"
+                            />
                         </div>
                     </div>
                 </div>
-                <div className="row px-md service">
-                    <div className="service__image">
-                        <div className="service__container-image">
+
+                <div className="home__title-container">
+                    <h2>VENTAJAS</h2>
+                </div>
+
+                <div className="home__benefit">
+                    <div className="home__benefit-left">
+                        <div class="home__benefit-item">
+                            <img src="/images/s1.png" alt="servicio 1" />
+                            <span>CONTROL TOTAL</span>
+                        </div>
+                        <div class="home__benefit-item">
+                            <img src="/images/s2.png" alt="servicio 2" />
+                            <span>SOPORTE 24/7</span>
+                        </div>
+                        <div class="home__benefit-item">
+                            <img src="/images/s3.png" alt="servicio 3" />
+                            <span>MULTIDISPOSITIVOS</span>
+                        </div>
+                        <div class="home__benefit-item">
+                            <img src="/images/s4.png" alt="servicio 4" />
+                            <span>PROTECCIÓN COVID 19</span>
+                        </div>
+                        <div class="home__benefit-item">
+                            <img src="/images/s5.png" alt="servicio 5" />
+                            <span>INNOVACIÓN</span>
                         </div>
                     </div>
-                    <div className="service__content">
-                        <div className="service__content-title"><span>2</span> <h6>Ofrece a tus comensales una experiencia de calidad</h6></div>
-                        <p>
-                            Por medio del aplicativo móvil permite que puedan ver la carta y realizar sus pedidos.
-                        </p>
+                    <div className="home__benefit-right">
+                        <img src="/images/f6.png" alt="App" />
                     </div>
                 </div>
-                <div className="row px-md">
-                    <div className="service__content">
-                        <div className="service__content-title"><span>3</span> <h6>Gestiona tus pedidos de una manera rápida, fácil y detallada</h6></div>
-                        <p>
-                            Recibe los pedidos organizados por mesa y por orden de llegada.
-                        </p>
-                    </div>
-                    <div className="service__image">
-                        <div className="service__container-image">
-                        </div>
-                    </div>
+
+                <div className="home__title-container">
+                    <h2>NUESTROS PRECIOS</h2>
+                    <p>
+                        Prueba gratuita por un mes,
+                        sin compromiso.
+                    </p>
                 </div>
-                <div className="advantage">
-                    <div className="row">
-                        <div className="adventage__col">
-                        </div>
-                        <div className="adventage__col">
-                            <h6 className="text__title--3">VENTAJAS</h6>
-                            <div className="row service__container-item">
-                                <div className="service__item">
-                                    <img src="/images/s1.png" alt="servicio 1" />
-                                    <span>CONTROL TOTAL</span>
-                                </div>
-                                <div className="service__item">
-                                    <img src="/images/s2.png" alt="servicio 2" />
-                                    <span>SOPORTE 24/7</span>
-                                </div>
-                                <div className="service__item">
-                                    <img src="/images/s3.png" alt="servicio 3" />
-                                    <span>MULTIDISPOSITIVOS</span>
-                                </div>
-                                <div className="service__item">
-                                    <img src="/images/s4.png" alt="servicio 4" />
-                                    <span>PROTECCIÓN COVID 19</span>
-                                </div>
-                                <div className="service__item">
-                                    <img src="/images/s5.png" alt="servicio 5" />
-                                    <span>INNOVACIÓN</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="row px-md pt-md">
-                    <div className="text-center w-100">
-                        <h5 className="text__title--1 pt-0"><span>NUESTRO PRECIOS</span></h5>
-                        <p className="text__title--6">Prueba gratituita de un mes sin compromiso</p>
-                    </div>
-                </div>
-                <div className="prices">
-                    <div className="prices__item">
-                        <div className="prices__circle">
+
+                <div class="home__prices">
+                    <div class="home__prices-item">
+                        <div class="home__prices-circle">
                             <span>PACK</span>
                             <span>BASIC</span>
                         </div>
                         <h6>SERVICIO DE UN MES</h6>
                         <span>$10</span>
-                        <div className="prices__content">
-                            <p><i className="fa-solid fa-check" /> Funciones 100%</p>
-                            <p><i className="fa-solid fa-check" /> Usuarios ilimitados</p>
-                            <p><i className="fa-solid fa-check" /> Código QR</p>
-                            <p><i className="fa-solid fa-check" /> Personalización</p>
-                            <a href="#">Buy now</a>
+                        <div class="home__prices-content">
+                            <p><i class="fa-solid fa-check"></i> Funciones 100%</p>
+                            <p><i class="fa-solid fa-check"></i> Usuarios ilimitados</p>
+                            <p><i class="fa-solid fa-check"></i> Código QR</p>
+                            <p><i class="fa-solid fa-check"></i> Personalización</p>
+                            <a href="/contact">Buy now</a>
                         </div>
                     </div>
                 </div>
+
+
             </main>
 
             <Footer />

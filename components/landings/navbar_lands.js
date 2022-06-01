@@ -1,14 +1,20 @@
 import {useState} from 'react' 
 import Link from "next/link"
 
-const NavbarLands = ({basic_landing_information}) => {
+const NavbarLands = ({basic_landing_information, image_banner}) => {
 
     console.log("los datos en el menu : ", basic_landing_information)
 
     const [showMenu, setShowMenu] = useState(false)
     return (
         <>
-            <div className="banner">
+            <div className="banner" style={{
+                
+                'width': '100%',
+                'background': `url(${image_banner})`,
+            
+                'background-size': 'cover'
+                }}>
                 <div className='banner__background'>
                     <header className="banner__header fixe">
                         <div className="banner__bars" onClick={() => setShowMenu(!showMenu)}>

@@ -64,6 +64,7 @@ const LandingContainer = (props) => {
 
                 <NavbarLands
                     basic_landing_information={basic_landing_information[0]}
+                    image_banner={business_images[0].url_image} 
                 />
 
                 <div id="SectionAbout">

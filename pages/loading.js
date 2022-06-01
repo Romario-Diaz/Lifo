@@ -1,8 +1,16 @@
 
+import ReactLoading from 'react-loading';
+
 const Loading = () => {
     return (
         <>
-            <h1>Cargando...</h1>
+            <div className='loading_container'>
+                <div className='loading'>
+                    <ReactLoading type={`bubbles`} color={`#000`} height={'100px'} width={'100px'} />
+                </div>
+            </div>
+
+           
         </>
     )
 }

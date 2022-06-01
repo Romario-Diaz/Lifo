@@ -8,6 +8,8 @@ import LandingContainer from "../../components/landings/landing_container";
 
 import Loading from "../loading";
 
+
+
 const Landings = () => {
 
     const [basicLandingInformation, setBasicLandingInformation] = useState([])

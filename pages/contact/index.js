@@ -9,16 +9,30 @@ const Contact = () => {
     return (
         <>
             <Metadata />
-            <Navigation />
-            <main className="pt-md">
-                <div className="row px-md service">
-                    <div className="text-center w-100">
-                        <h5 className="text__title--1 pt-0"><span>ESCRIBENOS</span></h5>
-                        <h5 className="text__title--1 pt-0">CONTACTA CON NOSOTROS</h5>
-                    </div>
+            <Navigation
+                img_url="images/b2.png"
+            />
+
+            <main>
+                <div className="home__play-container">
+                <a href='https://play.google.com/store/apps/details?id=com.lifo&hl=es' target="_blank">
+                            <img
+                                src="https://lh3.googleusercontent.com/1hJj6Aw2k6cEyFu10xdj5riLo0wBGFKE5XnbGaymhgo1z8Tsr8EpfJr2jbQFRxDONvwk6lak-62F2Fx7-_jp-ykJKA=w1000-e365"
+                                alt="Play store"
+                            />
+                        </a>
                 </div>
-                <div className="d-flex pt-md contact">
-                    <div className="contact__container">
+
+                <div className="home__title-container">
+                    <h2>CONTACTA CON NOSOTROS</h2>
+                    <p>
+                        !Escríbenos
+                    </p>
+                </div>
+
+
+                <div class="home__contact">
+                    <div class="home__contact-container">
                         <h6>N° CELULAR</h6>
                         <p>+51 952 369 712</p>
                         <p>+51 952 369 712</p>
@@ -28,7 +42,10 @@ const Contact = () => {
                         <p>devinnovation@gmail.com</p>
                     </div>
                 </div>
+
+
             </main>
+
             <Footer />
         </>
     )

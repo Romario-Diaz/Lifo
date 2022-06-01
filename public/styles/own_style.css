@@ -69,3 +69,14 @@
     /* margin-bottom: 1rem; */
 
 }
+
+.loading {
+    width: 100px;
+    margin: auto;
+    margin-top: 40vh;
+}
+
+.loading_container {
+    width: 100%;
+    margin: auto;
+}

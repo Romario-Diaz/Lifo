@@ -3,27 +3,75 @@
 const Footer = () => {
     return (
         <>
-            <footer className="footer">
-                <div className="row px-md footer__top">
-                    <div className="footer__col">
-                        <a href="#">Nosotros</a>
-                        <a href="#">Privacidad</a>
-                        <a href="#">Términos y condiciones</a>
-                        <a href="#">Registra tu negocio</a>
+            <footer className="home__footer">
+                <div className="home__footer-top">
+                    <div className="home__footer-col"></div>
+                    <div className="home__footer-col">
+                        <p>Nuestra app</p>
+                        <div className="home__footer-list">
+                            <a >
+                                {" "}
+                                <i className="fa-solid fa-chevron-right"></i> Carta digital
+                            </a>
+                            <a >
+                                {" "}
+                                <i className="fa-solid fa-chevron-right"></i> Panel administrativo
+                            </a>
+                            <a >
+                                {" "}
+                                <i className="fa-solid fa-chevron-right"></i> Tarifas
+                            </a>
+                            <a >
+                                {" "}
+                                <i className="fa-solid fa-chevron-right"></i> FAQS
+                            </a>
+                            <a >
+                                {" "}
+                                <i className="fa-solid fa-chevron-right"></i> Landing
+                            </a>
+                        </div>
                     </div>
-                    <div className="footer__col">
-                        <p>Siguenos en</p>
-                        <i className="fa-brands fa-facebook-square" /> <i className="fa-brands fa-instagram" />
+                    <div className="home__footer-col">
+                        <p>Nuestros servicios</p>
+                        <div className="home__footer-list">
+                            <a >
+                                {" "}
+                                <i className="fa-solid fa-chevron-right"></i> Carta digital QR
+                            </a>
+                            <a >
+                                {" "}
+                                <i className="fa-solid fa-chevron-right"></i> App de pedidos
+                            </a>
+                            <a >
+                                {" "}
+                                <i className="fa-solid fa-chevron-right"></i> Landing para tu
+                                negocio
+                            </a>
+                            <a >
+                                {" "}
+                                <i className="fa-solid fa-chevron-right"></i> Posicionamiento online
+                            </a>
+                        </div>
                     </div>
-                    <div className="footer__col">
-                        <p>Descarga la app</p>
-                        <i className="fa-brands fa-android" />
+                    <div className="home__footer-col">
+                        <p>Contacto</p>
+                        <div className="home__footer-list">
+                            <a >
+                                <i className="fa-solid fa-phone"></i> +51 952369712
+                            </a>
+                            <a >
+                                <i className="fa-solid fa-phone"></i> +51 952369712
+                            </a>
+                            <a >
+                                <i className="fa-solid fa-envelope"></i> lifo@gmail.com
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div className="row px-md">
-                    <div className="footer__bottom">
-                        <p>Copyright © 2021 - Lifo</p>
-                    </div>
+                <div className="home__footer-bottom">
+                    <p>
+                        <strong>LIFO</strong> © 2022 All Right Reserved
+                    </p>
                 </div>
             </footer>
         </>

@@ -34,7 +34,10 @@ const FooterLands = ({ all_cellphones, all_telephones, all_address }) => {
                     </div>
                 </div>
                 <div className="footers__bottom">
-                    <p>© Misk'iq 2021 . Todos los derechos reservados. Diseñado por Devinn</p>
+                    <p>
+                        <strong>LIFO</strong> © 2022 All Right Reserved
+                    </p>
+                    
                 </div>
             </footer>
         </>

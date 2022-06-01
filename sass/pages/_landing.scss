@@ -1,8 +1,8 @@
 .banner {
     height: 76.8rem;
-    width: 100%;
-    background: url('/images/landing/banner.jpg');
-    background-size: cover;
+    // width: 100%;
+    // background: url('/images/landing/banner.jpg');
+    // background-size: cover;
 
     @include respond(phone) {
         height: 40.8rem;
