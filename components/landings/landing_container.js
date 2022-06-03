@@ -28,6 +28,8 @@ const LandingContainer = (props) => {
     useEffect(() => {
         // console.log("masp", basic_landing_information[0].name)
 
+        console.log("las imagenes : ", business_images)
+
         let cat = []
         let ordered = []
         let cat_name = {}
@@ -69,7 +71,6 @@ const LandingContainer = (props) => {
 
                 <div id="SectionAbout">
                     <SectionAbout
-
                         description={basic_landing_information[0].description}
                         image_about={business_images[1].url_image}
                     />

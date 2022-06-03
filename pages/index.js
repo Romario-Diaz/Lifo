@@ -126,7 +126,10 @@ const Home = () => {
                     {associate.map((item) =>
                         <div key={item.logo} className="home__business-content">
                             <div className="home__business-logo">
-                                <Link href={`https://lifoperu.com/${item.url_landing}`}>
+                                <Link 
+                                // href={`https://lifoperu.com/${item.url_landing}`}
+                                href={`/${item.url_landing}`}
+                                >
                                     <a>
                                         <img src={`${item.logo}`} alt="Negocio" />
                                     </a>

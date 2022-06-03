@@ -28,7 +28,7 @@ const Landings = () => {
     useEffect(() => {
         setLoading(true)
         setPageExists(false)
-        fetch(`https://lifo-beta.herokuapp.com/business/landing/${router.query.landings}`, {
+        fetch(`https://api.lifoperu.com/landing/business/${router.query.landings}`, {
             method: 'GET'
         })
             .then(response => response.json())
@@ -36,7 +36,17 @@ const Landings = () => {
                 console.log("los datos:", data.data)
                 if (data.status === true) {
                     setBasicLandingInformation(data.data[0])
-                    setBusinessImages(data.data[1])
+
+                    if(data.data[1].length != 0) {
+                        setBusinessImages(data.data[1])
+                    }else {
+                        let fictic_data = [
+                            {url_image: "/images/landing/default.jpg"},
+                            {url_image: "/images/landing/default.jpg"}
+                        ]
+                        setBusinessImages(fictic_data)
+                    }
+                    
                     setAllProducts(data.data[2])
                     setAllCategories(data.data[3])
                     setAllCellphones(data.data[4])
