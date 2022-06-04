@@ -128,7 +128,7 @@ const Home = () => {
                             <div className="home__business-logo">
                                 <Link 
                                 // href={`https://lifoperu.com/${item.url_landing}`}
-                                href={`/${item.url_landing}`}
+                                href={`https://www.lifoperu.com/${item.url_landing}`}
                                 >
                                     <a>
                                         <img src={`${item.logo}`} alt="Negocio" />
