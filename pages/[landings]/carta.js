@@ -45,11 +45,11 @@ const Carta = () => {
                     cat.push(products[j])
                     aux = aux + 1
 
-                    if (aux >= 5) {
+                    // if (aux >= 5) {
 
-                        break filteredProd;
+                    //     break filteredProd;
 
-                    }
+                    // }
                 }
             }
             cat_name = categories[i].name

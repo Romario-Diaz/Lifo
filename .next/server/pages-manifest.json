@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.js",
+  "/[landings]/carta": "pages/[landings]/carta.js",
   "/[landings]": "pages/[landings].js",
-  "/[landings]/carta": "pages/[landings]/carta.js"
+  "/": "pages/index.js"
 }
