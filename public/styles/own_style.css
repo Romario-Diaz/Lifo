@@ -46,6 +46,7 @@
 
 .gallery__item {
     list-style: none !important;
+    cursor: pointer;
 }
 
 .gallery__filter {
@@ -65,7 +66,7 @@
     transition: all .3s ease;
     margin-bottom: 2rem;
     cursor: pointer;
-    border-radius: 50px !important;
+    /* border-radius: 50px !important; */
     /* margin-bottom: 1rem; */
 
 }

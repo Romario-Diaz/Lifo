@@ -1,0 +1,7 @@
+.mt-70 {
+    margin-top: 7rem!important;
+
+    @include respond(tab-port) {
+        margin-top: 3rem!important;
+    }
+}

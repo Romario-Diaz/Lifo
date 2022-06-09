@@ -1,7 +1,7 @@
 .banner {
     height: 76.8rem;
-    // width: 100%;
-    // background: url('/images/landing/banner.jpg');
+    width: 100%;
+    // background: url('../../assets/images/landing/banner.jpg');
     // background-size: cover;
 
     @include respond(phone) {
@@ -23,7 +23,7 @@
         padding: 2rem;
     }
 
-    &__menu {
+    &__menus {
         padding-right: 8rem;
         padding-top: 1rem;
 
@@ -46,7 +46,7 @@
 
     }
 
-    &__menu.active {
+    &__menus.active {
         left: 0;
     }
 
@@ -147,13 +147,12 @@
 
 .about {
     padding: 12rem 10.4rem;
-    background: url('/images/landing/background.png');
+    // background: url('../../assets/images/landing/background.png');
     background-size: cover;
     background-position:  right;
+    background-repeat: no-repeat;
 
     display: flex;
-
-    // padding: 6rem 2.3rem;
 
     @include respond(tab-port) {
         flex-direction: column;
@@ -377,10 +376,8 @@
         font-size: 1.4rem;
         text-transform: uppercase;
         color: #999;
-        border-right: .2rem solid #fff;
         transition: all .3s ease;
         margin-bottom: 2rem;
-        cursor: pointer;
 
         @include respond(tab-port) {
             margin-bottom: 1rem;
@@ -393,10 +390,8 @@
     }
 
     &__item:nth-child(1) {
-        border-bottom-left-radius: 2rem;
-        border-top-left-radius: 2rem;
         // background-color: #F9A815;
-        color: #Fff;
+        // color: #Fff;
 
         @include respond(tab-port) {
             border-radius: 0;
@@ -404,8 +399,6 @@
     }
 
     &__item:last-child {
-        border-bottom-right-radius: 2rem;
-        border-top-right-radius: 2rem;
 
         @include respond(tab-port) {
             border-radius: 0;
@@ -427,7 +420,7 @@
         width: 36rem;
         height: 24rem;
         margin: 1.5rem 0;
-        border-radius: 2rem;
+        border-radius: 1.5rem;
         overflow: hidden;
         position: relative;
         cursor: pointer;
@@ -446,6 +439,32 @@
         left: 0;
     }
 
+    &__image-item:hover &__image-back.none {
+        left: -100%;
+    }
+
+    &__image-content {
+        position: absolute;
+        width: 100%;
+        height: 25%;
+        background-color: #F9A815;
+        bottom: 0;
+        left: 0; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        
+        span:first-child {
+            font-size: 1.6rem;
+        }
+        
+        span:last-child {
+            font-size: 1.4rem;
+        }
+    }
+
     &__image-back {
         position: absolute;
         width: 100%;
@@ -457,7 +476,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 2rem;
+        border-radius: 1.5rem;
         transition: all .7s ease;
 
         span {
@@ -474,7 +493,8 @@
 }
 
 
-.footers {
+.footers
+ {
     background-color: #262626;
 
     &__top {

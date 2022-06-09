@@ -28,12 +28,14 @@ const Landings = () => {
     useEffect(() => {
         setLoading(true)
         setPageExists(false)
+        console.log("tadaaaa",router.query)
         fetch(`https://api.lifoperu.com/landing/business/${router.query.landings}`, {
             method: 'GET'
         })
             .then(response => response.json())
             .then(data => {
-                console.log("los datos:", data.data)
+                console.log("los datos..:", data.data)
+                console.log("tadaaaa",router.query)
                 if (data.status === true) {
                     setBasicLandingInformation(data.data[0])
 

@@ -13,7 +13,7 @@ const SectionGallery = ({ all_products_sorted }) => {
     }, [all_products_sorted])
 
     const changeColor = (id) => {
-        console.log("id:", id.cat_name)
+        // console.log("id:", id.cat_name)
         setCatName(id.cat_name)
     }
 
