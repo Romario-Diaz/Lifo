@@ -1,0 +1,81 @@
+.modal {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(.5);
+    visibility: hidden;
+    transition: all .3s;
+    opacity: 0;
+
+    &__btn {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 100%;
+        cursor: pointer;
+        position: absolute;
+        background-color: #000;
+        top: 1rem;
+        right: 2rem;
+        transition: all .3s;
+
+        @include respond(phone) {
+            right: 1rem;
+        }
+
+        i {
+            color: #fff;
+        }
+    }
+
+    &__btn:hover {
+        background-color: rgb(19, 18, 18);
+    }
+
+    &__content {
+        text-align: center;
+
+        img {
+            width: 60rem;
+            height: 40rem;
+
+            @include respond(phone) {
+                width: 30rem;
+                height: 30rem;
+            }
+        }
+
+        div {
+            color: #fff;
+            margin-top: 2rem;
+
+            @include respond(phone) {
+                padding: 0 2rem;
+            }
+
+            h6 {
+                font-size: 1.7rem;
+            } 
+
+            p {
+                font-size: 1.4rem;
+            }
+
+            span {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+
+.modal.active {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}

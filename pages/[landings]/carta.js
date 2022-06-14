@@ -13,13 +13,17 @@ const Carta = () => {
     const [productsPerCategorie, setProductPerCategorie] = useState([])
     const [catName, setCatName] = useState("")
 
+    const [showModal, setShowModal] = useState(false)
+    const [productModal, setProductModal] = useState()
+
     const router = useRouter()
 
     const url = "https://api.lifoperu.com/landing/menu"
 
 
     const changeCategorie = (categorie_name) => {
-        console.log("llegaa : ", categorie_name)
+        // console.log("llegaa : ", categorie_name)
+        setCatName(categorie_name)
         for (let z = 0; z < allProducts.length; z++) {
             if (allProducts[z].cat_name == categorie_name) {
                 console.log("lo cambiamos por : ", allProducts[z].cat)
@@ -29,8 +33,6 @@ const Carta = () => {
     }
 
     const asignData = (categories, products) => {
-        console.log("estas son las caegoriaas: ", categories)
-        console.log("los productos", products)
         let cat = []
         let ordered = []
         let cat_name = {}
@@ -44,12 +46,6 @@ const Carta = () => {
                 if (categories[i].id == products[j].category_id) {
                     cat.push(products[j])
                     aux = aux + 1
-
-                    // if (aux >= 5) {
-
-                    //     break filteredProd;
-
-                    // }
                 }
             }
             cat_name = categories[i].name
@@ -61,14 +57,6 @@ const Carta = () => {
         setAllProducts(ordered)
         setCatName(ordered[0].cat_name)
         setProductPerCategorie(ordered[0].cat)
-
-        // Pristine:for(let a = 0; a < ordered.length; a++) {
-        //     if(ordered[a].cat.length != 0) {
-
-        //         break Pristine
-        //     }
-        // }
-
     }
 
     useEffect(() => {
@@ -100,11 +88,21 @@ const Carta = () => {
     }, [])
 
     return (
-        <>{pageExist ? 
+        <>{pageExist ?
             <>
                 <div>
-                    <div className="banner">
-                        <div className="banner__background">
+                    <div className="banner"
+
+                    >
+                        <div className="banner__background"
+                                                style={{
+
+                                                    'width': '100%',
+                                                    'background': 'url("https://cdn.foodandwineespanol.com/2019/07/Cocina_de_Autor.jpg")',
+                        
+                                                    'background-size': 'cover'
+                                                }}
+                        >
                             <div className="banner__info">
                                 <h1>El Califa</h1>
                                 <p>Cevichería Restaurante</p>
@@ -128,7 +126,13 @@ const Carta = () => {
 
                         <div className="gallery__images">
                             {productsPerCategorie.map((prod, i) => (
-                                <div key={i} className="gallery__image-item">
+                                <div key={i}
+                                    onClick={() => {
+                                        setShowModal(true);
+                                        setProductModal(prod)
+                                        document.body.style.overflow = 'hidden';
+                                    }}
+                                    className="gallery__image-item">
                                     <img
                                         src={`${prod.url_image}`}
                                         alt="food"
@@ -148,6 +152,32 @@ const Carta = () => {
                     </div>
                 </div>
 
+                <div className={showModal ? "modal active" : "modal"}>
+                    <button className="modal__btn" onClick={() => {
+                        setShowModal(false);
+                        document.body.style.overflow = 'unset';
+                    }}>
+                        <i class="fa-solid fa-xmark">X</i>
+                    </button>
+
+                    <div className="modal__content">
+                        {productModal ?
+                            <>
+                                <img src={`${productModal.url_image}`} />
+                                <div>
+                                    <h6>{productModal.name}</h6>
+                                    <p>
+                                        {productModal.description}
+                                    </p>
+                                    <span> S/. {productModal.price}</span>
+                                </div>
+                            </>
+                            :
+                            <></>
+                        }
+
+                    </div>
+                </div>
 
                 <footer className="footers">
                     <div className="footers__top">
@@ -177,8 +207,8 @@ const Carta = () => {
                 </footer>
             </>
             :
-            <PageNotFound/>
-            
+            <PageNotFound />
+
         }
 
         </>
