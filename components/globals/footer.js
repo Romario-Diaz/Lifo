@@ -60,7 +60,7 @@ const Footer = () => {
                                 <i className="fa-solid fa-phone"></i> +51 952369712
                             </a>
                             <a >
-                                <i className="fa-solid fa-phone"></i> +51 952369712
+                                <i className="fa-solid fa-phone"></i> +51 984465276
                             </a>
                             <a >
                                 <i className="fa-solid fa-envelope"></i> lifo@gmail.com

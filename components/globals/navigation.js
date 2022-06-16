@@ -16,7 +16,7 @@ const Navigation = ({img_url}) => {
                 <div className="home__banner-content">
                     <header className="home__menu">
                         <Link href="/">
-                            <a>Nosostros</a>
+                            <a>Nosotros</a>
                         </Link>
                         <Link href="/join">
                             <a>Asociate</a>

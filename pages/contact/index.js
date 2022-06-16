@@ -35,7 +35,7 @@ const Contact = () => {
                     <div class="home__contact-container">
                         <h6>N° CELULAR</h6>
                         <p>+51 952 369 712</p>
-                        <p>+51 952 369 712</p>
+                        <p>+51 984 465 276</p>
                     </div>
                     <div>
                         <h6>CORREO ELECTRÓNICO</h6>

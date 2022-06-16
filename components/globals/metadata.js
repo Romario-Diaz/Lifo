@@ -5,6 +5,9 @@ const Metadata = () => {
     return (
         <>
             <Head>
+                <title>Lifo</title>
+
+                <link rel="icon"  href="favicon.ico" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
                 <link href="http://fonts.cdnfonts.com/css/cooper-black" rel="stylesheet" />

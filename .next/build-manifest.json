@@ -15,10 +15,10 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
-    "/[landings]": [
+    "/": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/[landings].js"
+      "static/chunks/pages/index.js"
     ],
     "/[landings]/carta": [
       "static/chunks/webpack.js",
