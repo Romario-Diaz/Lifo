@@ -98,7 +98,7 @@ const Carta = () => {
                                                 style={{
 
                                                     'width': '100%',
-                                                    'background': 'url("https://cdn.foodandwineespanol.com/2019/07/Cocina_de_Autor.jpg")',
+                                                    'background': 'url("https://bucket-lifo.s3.us-east-2.amazonaws.com/landing/califaslide.jpg")',
                         
                                                     'background-size': 'cover'
                                                 }}
