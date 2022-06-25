@@ -15,6 +15,7 @@ const Carta = () => {
 
     const [showModal, setShowModal] = useState(false)
     const [productModal, setProductModal] = useState()
+    const [profile, setProfile] = useState({name: '', url_image: ''})
 
     const router = useRouter()
 
@@ -75,7 +76,9 @@ const Carta = () => {
                     })
                         .then(response => response.json())
                         .then(data => {
+                            console.log('dataaa:',data)
                             asignData(data.data[2], data.data[1])
+                            setProfile(data.data[4][0])
                         })
 
                     setPageExists(true)
@@ -95,17 +98,16 @@ const Carta = () => {
 
                     >
                         <div className="banner__background"
-                                                style={{
+                            style={{
 
-                                                    'width': '100%',
-                                                    'background': 'url("https://bucket-lifo.s3.us-east-2.amazonaws.com/landing/califaslide.jpg")',
-                        
-                                                    'background-size': 'cover'
-                                                }}
+                                'width': '100%',
+                                'background': `url(${profile.url_image})0% 0% / cover`,
+                                'background-size': 'cover'
+                            }}
                         >
                             <div className="banner__info">
-                                <h1>El Califa</h1>
-                                <p>Cevichería Restaurante</p>
+                                <h1>{profile.name}</h1>
+                                {/* <p>Cevichería Restaurante</p> */}
                             </div>
                         </div>
                     </div>
@@ -184,19 +186,19 @@ const Carta = () => {
                         <div className="footers__col">
                             <h3>DIRECCIONES</h3>
                             <p>Puerto Maldonado</p>
-                            <p>Psj. Piura</p>
+                            {/* <p>Sin dirección</p> */}
 
                         </div>
                         <div className="footer__col">
-                            <h3>HORARIO DE ATENCIÓN</h3>
-                            <p>Lun-Sab: 09:00 AM - 06:00 PM</p>
-                            <p>Dom-Fer: 11:00 AM - 04:00 PM</p>
+                            {/* <h3>HORARIO DE ATENCIÓN</h3> */}
+                            {/* <p>Sin Definir</p> */}
+                            {/* <p>Dom-Fer: 11:00 AM - 04:00 PM</p> */}
                         </div>
                         <div className="footer__col">
-                            <h3>DIRECCIONES</h3>
+                            {/* <h3>DIRECCIONES</h3>
                             <p>Celular: +51 942 612 124</p>
                             <p>ACelular: +51 918 826 321</p>
-                            <p>Email: local@gmail.com</p>
+                            <p>Email: local@gmail.com</p> */}
                         </div>
                     </div>
                     <div className="footer__bottom">
